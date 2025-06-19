@@ -1,12 +1,16 @@
-function fibonacci() {
-    return 0
+function fibonacci(number: number): number {
+    if(number === 0) return 0;
+    return 1;
 }
 
 describe('The fibonacci sequence', () => {
     it('yields value zero to number zero', () => {
-        expect(fibonacci()).toBe(0)
+        expect(fibonacci(0)).toBe(0)
     })
     it('yields value one to number one', () => {
-        expect(fibonacci()).toBe(1)
+        expect(fibonacci(1)).toBe(1)
+    })
+    it('is a series where the value for a number is the addition of the preceding two values', () => {
+        expect(fibonacci(2)).toBe(fibonacci(0) + fibonacci(1))
     })
 })
