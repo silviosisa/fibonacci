@@ -1,7 +1,4 @@
-function fibonacci(number: number): number {
-    if(number === 0) return 0;
-    return 1;
-}
+import {fibonacci} from "../core/fibonacci";
 
 describe('The fibonacci sequence', () => {
     it('yields value zero to number zero', () => {
